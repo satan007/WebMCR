@@ -1,0 +1,30 @@
+<div class="form-block" style="margin-bottom: 12px;" >
+
+<form method="post">
+  <fieldset>
+  
+	<input type="hidden" name="step" value="2" />
+	
+    <legend>Шаг 2: Выбор CMS</legend>
+	
+	<label>CMS сайта:</label>
+	<span class="help-block">CMS используемая в качестве основной. </span>
+    <select name="cms_hash">
+                <option value="webmcr">WebMCR 2.0 (рекомендуется)</option>
+                <option value="wordpress">Wordpress</option>
+				<option value="dle">DLE</option>
+				<option value="ipb">IP.Board</option>
+            </select>
+	
+		
+	<label class="checkbox">
+	  <input type="checkbox" name="mysql_rewrite" value="1"> Отчистить базу данных
+	</label>
+	<span class="help-block">В случае если у вас уже был установлен <?php echo PROGNAME; ?> - удалит все содержимое </span>
+	
+    <button type="submit" class="btn">Продолжить</button>
+	
+  </fieldset>
+</form>
+
+</div>

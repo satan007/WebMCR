@@ -1,0 +1,39 @@
+<div class="form-block" style="margin-bottom: 12px;" >
+
+<form method="post">
+  <fieldset>
+  
+	<input type="hidden" name="step" value="23" />
+	
+    <legend>Шаг 3: Настройка IP.Board</legend>
+	<label>Основная таблица c пользователями в БД:</label>
+	<span class="help-block">Таблица c пользователями. По умолчанию ipb_members. Префикс может осутствовать!</span>
+    <input type="text" name="cms_users" value="<?php echo $config['c_users']; ?>">	
+	
+	<label>ID:</label>
+	<span class="help-block">Колонка с ID. По умолчанию ID</span>
+    <input type="text" name="cms_id" value="<?php echo $config['c_id']; ?>">
+	
+	<label>Login:</label>
+	<span class="help-block">Колонка с логинами пользователей.</span>
+    <input type="text" name="cms_login" value="<?php echo $config['c_login']; ?>">
+	
+	<label>E-mail:</label>
+	<span class="help-block">Колонка с email-ом пользователей </span>
+    <input type="text" name="cms_email" value="<?php echo $config['c_email']; ?>">
+	
+	<label>Password:</label>
+	<span class="help-block">Колонка с паролями</span>
+    <input type="text" name="cms_password" value="<?php echo $config['c_pass']; ?>">
+	
+	<label>Salt:</label>
+	<span class="help-block">Колонка с salt</span>
+    <input type="text" name="cms_salt" value="<?php echo $config['c_salt']; ?>">
+		
+	
+    <button type="submit" class="btn">Продолжить</button>
+	
+  </fieldset>
+</form>
+
+</div>

@@ -1,0 +1,36 @@
+<div class="form-block" style="margin-bottom: 12px;" >
+
+<form method="post">
+  <fieldset>
+  
+	<input type="hidden" name="step" value="wordpress" />
+	
+    <legend>Шаг 3: Настройки CMS</legend>
+	
+	<label>Основная таблица пользователями в БД:</label>
+	<span class="help-block">Таблица c пользователями. По Умолчанию таблица accounts. У каждой CMS своя таблица.</span>
+    <input type="text" name="cms_users" value="<?php echo $config['c_users']; ?>">	
+	
+	<label>ID:</label>
+	<span class="help-block">Колонка с ID. По умолчанию ID</span>
+    <input type="text" name="cms_id" value="<?php echo $config['c_id']; ?>">
+	
+	<label>Login:</label>
+	<span class="help-block">Колонка с логинами пользователей.</span>
+    <input type="text" name="cms_login" value="<?php echo $config['c_login']; ?>">
+	
+	<label>email:</label>
+	<span class="help-block">Колонка с email-ом пользователей </span>
+    <input type="text" name="cms_email" value="<?php echo $config['c_email']; ?>">
+	
+	<label>Password:</label>
+	<span class="help-block">Колонка с паролями</span>
+    <input type="text" name="cms_password" value="<?php echo $config['c_pass']; ?>">
+		
+	
+    <button type="submit" class="btn">Продолжить</button>
+	
+  </fieldset>
+</form>
+
+</div>
