@@ -19,7 +19,7 @@ if ($config['c_hash'] == 'webmcr' || $config['c_hash'] == 'wordpress' || $config
  }
 if ($config['c_hash'] == 'ipb')
 {
- $result = BD("SELECT `{$bd_users['password']}`,`{$bd_users['id']}`,`{$config['c_salt']}` FROM `{$bd_names['users']}` WHERE `{$bd_users['login']}`='$name' OR `{$bd_users['email']}`='$name'"); 
+ $result = BD("SELECT `{$bd_users['password']}`,`{$config['c_salt']}`,`{$bd_users['id']}` FROM `{$bd_names['users']}` WHERE `{$bd_users['login']}`='$name' OR `{$bd_users['email']}`='$name'"); 
 }
  if ( !$result or !mysql_num_rows( $result ) ) { mysql_close( $link ); aExit(4,'Пользователь с таким именем или e-mail\'ом не существует.'); } 
  require_once(MCR_ROOT.'instruments/password.php');

@@ -159,8 +159,9 @@ switch ($step) {
 	$bd_users['login']	  = $cms_login  ;
 	$bd_users['email']	  = $cms_email  ;
 	$bd_users['password'] = $cms_password  ;
+	$cms_hash = $config['c_hash'];
 	if (SaveOptions()) $step = 31;
-	include '../install/sql/sql_wordpress.php';
+	include "./sql/sql_$cms_hash.php";
 	break;
 	
 		
@@ -178,7 +179,7 @@ switch ($step) {
 	$bd_users['password'] = $cms_password  ;
 	$config['c_salt']   = $cms_salt;
 	if (SaveOptions()) $step = 31;
-				include "./sql/sql_$cms_hash.php";	
+				include './sql/sql_ipb.php';	
 	break;
 	
 	case 3:
